@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-24T12:26:00.000Z",
+  "phase": "Phase 1: Baseline Audit & Diagnostic Assessment",
+  "bundleMetrics": {
+    "totalJsBundleSizeUncompressedKb": 229.53,
+    "totalJsBundleSizeGzipKb": 70.54,
+    "totalCssBundleSizeKb": 0.0,
+    "cssEmbeddedInJs": true,
+    "htmlSizeKb": 1.19,
+    "chunkCount": 1,
+    "hasRouteSplitting": false,
+    "hasLazyComponents": false
+  },
+  "coreWebVitalsBaseline": {
+    "fcpSeconds": 1.8,
+    "lcpSeconds": 2.6,
+    "clsScore": 0.082,
+    "inpMs": 85,
+    "ttfbMs": 180,
+    "lighthousePerformanceScore": 72,
+    "lighthouseAccessibilityScore": 78,
+    "lighthouseBestPracticesScore": 81
+  },
+  "profilerMetrics": {
+    "initialMountDurationMs": 21.36,
+    "initialBaseDurationMs": 8.11,
+    "reRendersOnInputCycle": 6,
+    "searchRenderDurationMs": 7.52,
+    "memoizedComponentsCount": 0,
+    "unstableCallbackCount": 5
+  },
+  "accessibilityAudit": {
+    "axeViolationsCount": 1,
+    "axeRulesViolated": [
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "description": "Heading levels should only increase by one (H1 in Header directly to H3 in StatCards, skipping H2)",
+        "nodesAffected": ["#stat-card-income h3", "#stat-card-expense h3", "#stat-card-balance h3", "#stat-card-savings h3"]
+      }
+    ],
+    "jsxA11yViolations": [
+      {
+        "rule": "jsx-a11y/no-autofocus",
+        "file": "src/components/BudgetProgressBar.jsx",
+        "line": 214,
+        "impact": "serious",
+        "description": "autoFocus on input element disrupts screen reader navigation flow"
+      }
+    ],
+    "semanticLandmarks": {
+      "hasSkipToContentLink": false,
+      "hasMainLandmark": false,
+      "hasNavLandmark": false,
+      "hasSectionLandmarks": false,
+      "divSoupCount": 24
+    },
+    "touchTargetViolations": [
+      { "element": "DeleteButton", "sizePx": "28x28", "minRequired": "48x48" },
+      { "element": "ClearSearchBtn", "sizePx": "24x24", "minRequired": "48x48" },
+      { "element": "ThemeButton", "sizePx": "42x42", "minRequired": "48x48" },
+      { "element": "EditButton", "sizePx": "26x60", "minRequired": "48x48" },
+      { "element": "SaveButton", "sizePx": "26x26", "minRequired": "48x48" },
+      { "element": "CloseButton", "sizePx": "26x26", "minRequired": "48x48" }
+    ],
+    "colorContrastViolations": [
+      { "element": "Light theme textMuted (#94a3b8 on #ffffff)", "contrastRatio": "2.5:1", "minRequired": "4.5:1" },
+      { "element": "Dark theme textMuted (#64748b on #111827)", "contrastRatio": "3.2:1", "minRequired": "4.5:1" }
+    ]
+  }
+}
